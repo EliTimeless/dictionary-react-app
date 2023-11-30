@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
+import Results from "./Results";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
+  let [results, setResults] = useState(null); //nastaví jako výchozí hodnotu "object",
+  //jelikož se hledaná hodnota neustále mění, musíme použít useState, abychom ji mohli zastavit a definovat
+  // pokud chceme předat dál informace, které zachytíme v tomto komponentu a předat je pomocí
+  // proměnné do jiného komponentu, musíme použít useState a pak v novém komponentu použít props.xxx
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(response.data[0].meanings[0].partOfSpeech); //slovni druh /verb/noun
+    console.log(response.data[0].meanings[0].synonyms[0]); //synonymum
+
+    setResults(response.data[0]);
   }
 
   function Search(event) {
     event.preventDefault();
-    alert(`Searching for ${keyword}`);
 
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
@@ -33,6 +40,7 @@ export default function Dictionary() {
       <form onSubmit={Search}>
         <input type="search" onChange={handleKeywordChange} autoFocus={true} />
       </form>
+      <Results results={results} />
     </div>
   );
 }
