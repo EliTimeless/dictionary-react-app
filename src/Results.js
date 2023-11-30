@@ -7,10 +7,10 @@ export default function Results(props) {
     // podmínka= pokud máme nějaký result, zobraz tento return
     return (
       <div className="Results">
-        <h1>
+        <h2>
           {props.results.word.slice(0, 1).toUpperCase() +
             props.results.word.slice(1, props.results.word.length)}
-        </h1>
+        </h2>
         {props.results.meanings.map(function (meaning, index) {
           return (
             <div key={index}>

@@ -7,7 +7,7 @@ export default function App() {
       <header className="App-header"></header>
       <div className="text-center m-3">
         {" "}
-        <h1>Dictionary</h1>{" "}
+        <h1 className="m-3 p-3">Dictionary</h1>{" "}
       </div>
       <main>
         <Dictionary />
