@@ -13,9 +13,9 @@ export default function Results(props) {
         </h2>
         {props.results.meanings.map(function (meaning, index) {
           return (
-            <div key={index}>
+            <span key={index}>
               <Meaning meaning={meaning} />
-            </div>
+            </span>
             //proměnná menaning je jako parametr funkce, který jsme získali zmapováním definic
           );
         })}

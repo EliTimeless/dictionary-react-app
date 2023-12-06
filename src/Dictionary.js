@@ -11,8 +11,8 @@ export default function Dictionary() {
   // proměnné do jiného komponentu, musíme použít useState a pak v novém komponentu použít props.xxx
 
   function handleResponse(response) {
-    console.log(response.data[0].meanings[0].partOfSpeech); //slovni druh /verb/noun
-    console.log(response.data[0].meanings[0].synonyms[0]); //synonymum
+    //console.log(response.data[0].meanings[0].partOfSpeech); //slovni druh /verb/noun
+    //console.log(response.data[0].meanings[0].synonyms[0]); //synonymum
 
     setResults(response.data[0]);
   }
