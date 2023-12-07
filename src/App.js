@@ -10,7 +10,7 @@ export default function App() {
         <h1 className="m-3 p-3">Dictionary</h1>{" "}
       </div>
       <main>
-        <Dictionary />
+        <Dictionary defaultKeyword="forest" />
       </main>
       <footer className="App-footer">
         This app is{" "}
