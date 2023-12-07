@@ -1,5 +1,5 @@
 .Phonetic {
-  height: 55px;
+  height: 60px;
 }
 
 .Phonetic a {
@@ -10,14 +10,15 @@
   font-size: 16px;
   font-weight: bold;
   margin-right: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   transition: all 150ms ease-in-out;
-  background-color: rgb(237, 251, 91);
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgb(248, 249, 231);
 }
 
 .Phonetic a:hover {
-  background: #d8fecd;
-  color: #239404;
+  background: #596e59;
+  color: #fff;
   font-weight: bold;
 }
 

@@ -1,15 +1,16 @@
 .Dictionary {
   font-size: 20px;
   text-align: center;
-  color: #fff;
 }
 
 .Dictionary section {
-  background-color: #45663c;
-  padding: 30px;
-  border-radius: 7px;
-  box-shadow: 0 5px 20px rgba(71, 70, 70, 0.7);
-  margin: 20px 0;
+  background-color: #e0ebd0;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(149, 149, 149, 0.7);
+  margin: 20px 20px;
+  color: #3a3a3a;
+  text-align: left;
 }
 
 .Dictionary input {

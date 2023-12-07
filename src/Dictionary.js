@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
 import Results from "./Results";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
@@ -11,18 +12,33 @@ export default function Dictionary(props) {
   // proměnné do jiného komponentu, musíme použít useState a pak v novém komponentu použít props.xxx
   let [loaded, setLoaded] = useState(false); //funkce, ktera se postara o nacitani stranky navic s
   //pouzitim vyrazu, se kterym se stranka nacte jiz poprve
+  let [photos, setPhotos] = useState(null);
 
-  function handleResponse(response) {
-    //console.log(response.data[0].meanings[0].partOfSpeech); //slovni druh /verb/noun
-    //console.log(response.data[0].meanings[0].synonyms[0]); //synonymum
-
+  function handleDictionaryResponse(response) {
     setResults(response.data[0]);
+  }
+
+  function handleSCResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleDictionaryResponse);
+
+    let scApiKey = "f93tf3a769fe4b66c3783bc2a833o0d4";
+    let scApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${scApiKey}`;
+
+    axios.get(scApiUrl).then(handleSCResponse);
+    /*let pexelsApiKey =
+      "YWIj71x3YYRGJ5EzwiLcvtI8YPrdQI3WfwXbbYCffIikUJ9j0zkjw7ey";
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+
+    axios
+      .get(pexelsUrl, { headers: { Authorization: `Bearer ${pexelsApiKey}` } })
+      .then(handlePexelsResponse);
+      */
   }
 
   function handleSubmit(event) {
@@ -61,6 +77,7 @@ export default function Dictionary(props) {
           <div className="hint">suggested word: leaf, forest, jungle</div>
         </section>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
