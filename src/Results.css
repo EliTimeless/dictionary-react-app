@@ -6,7 +6,9 @@
 }
 
 .Results h2 {
-  font-size: 36px;
+  font-size: 44px;
   font-weight: bold;
   line-height: 1.5;
+  padding: 15px;
+  margin-bottom: 15px;
 }
