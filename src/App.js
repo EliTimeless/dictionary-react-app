@@ -1,6 +1,6 @@
 import "./App.css";
 import Dictionary from "./Dictionary";
-import img1 from "./img/dictionary-img.jpeg";
+import img1 from "./img/Dictionary.jpg";
 
 //import image1 from "./images/image1.jpg";
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
         <img src={img1} alt="dictionary-logo" className="img-fluid" />{" "}
       </div>
       <main>
-        <Dictionary defaultKeyword="forest" />
+        <Dictionary defaultKeyword="warm" />
       </main>
       <footer className="App-footer">
         This app is{" "}

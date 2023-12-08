@@ -1,5 +1,5 @@
 body {
-  background-color: #606b5d;
+  background-color: #fff;
 }
 
 .App {
@@ -8,6 +8,7 @@ body {
 }
 .App-header {
   margin: 30px 0;
+  background-color: #f6a27b;
 }
 
 .App-footer {
@@ -16,8 +17,8 @@ body {
 }
 
 .App img {
+  background-color: #f7f2e8;
   width: 300px;
-  height: 250px;
+  height: 300px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
 }

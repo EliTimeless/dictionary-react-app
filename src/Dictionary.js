@@ -74,7 +74,9 @@ export default function Dictionary(props) {
               autoFocus={true}
             />
           </form>
-          <div className="hint">examples: leaf, forest, sky, mindfulness</div>
+          <div className="hint">
+            examples: landscape, sky, mindfulness, calm
+          </div>
         </section>
         <Results results={results} />
         <Photos photos={photos} />

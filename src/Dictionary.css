@@ -4,12 +4,17 @@
 }
 
 .Dictionary section {
-  background-color: #edffe9;
+  background: linear-gradient(
+    44deg,
+    rgb(237, 195, 192) 50%,
+    rgb(245, 222, 179) 100%
+  );
+
   padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(149, 149, 149, 0.7);
   margin: 20px 20px;
-  color: #3a3a3a;
+  color: #441505;
   text-align: left;
 }
 
