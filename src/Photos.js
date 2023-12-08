@@ -13,7 +13,7 @@ export default function Photos(props) {
                   <img
                     src={photo.src.portrait}
                     className="img-fluid m-1 p-1"
-                    alt="searched-picture"
+                    alt="searched"
                   />
                 </a>
               </div>
