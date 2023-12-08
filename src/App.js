@@ -19,7 +19,14 @@ export default function App() {
         <a href="https://github.com/EliTimeless/dictionary-react-app.git">
           open-sourced
         </a>{" "}
-        and is coded by Eliska Necasova
+        and is coded by{" "}
+        <a
+          href="https://www.linkedin.com/in/eliška-nečasová-front-end-tester"
+          alt="LinkedIn profile"
+          target="_blank"
+        >
+          Eliska Necasova
+        </a>
       </footer>
     </div>
   );
