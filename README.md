@@ -6,7 +6,7 @@ Welcome to the Dictionary React App repository! This project is a simple web app
 
 📖 Live Demo
 
-Check out the live demo [here](https://eli-portfolio-site.netlify.app/](https://dictionary-eli-react-app.netlify.app/).
+Check out the live demo [here](https://dictionary-eli-react-app.netlify.app/).
 
 📖 Features
 
